@@ -1,0 +1,23 @@
+services:
+  bot:
+    build: .
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+      - ENABLE_WHITELIST=${ENABLE_WHITELIST}
+      - DEBUG_MODE=${DEBUG_MODE}
+      - ADMIN_ID=${ADMIN_ID}
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    depends_on:
+      - ngrok
+
+  ngrok:
+    image: wernight/ngrok
+    ports:
+      - "4040:4040"
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    command: ngrok http bot:8080

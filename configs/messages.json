@@ -1,0 +1,22 @@
+{
+    "en": {
+      "start": "Hello! I am a bot for storing key:value pairs...",
+      "list_empty": "The list is empty.",
+      "saved": "Entry saved: %s: %s",
+      "invalid_format": "Invalid format. Use key:value.",
+      "unknown_command": "Unknown command.",
+      "remove_success": "Entry removed: %s",
+      "remove_fail": "Key not found: %s",
+      "help": "Available commands:\n/start - Start the bot\n/list - Show all saved data\n/remove <key> - Remove an entry by key\n/help - Show this help message"
+    },
+    "ru": {
+      "start": "Привет! Я бот для хранения пар key:value...",
+      "list_empty": "Список пуст.",
+      "saved": "Запись сохранена: %s: %s",
+      "invalid_format": "Неверный формат. Используйте key:value.",
+      "unknown_command": "Неизвестная команда.", 
+      "remove_success": "Запись удалена: %s",
+      "remove_fail": "Ключ не найден: %s",
+      "help": "Доступные команды:\n/start - Начать работу с ботом\n/list - Показать список сохранённых данных\n/remove <key> - Удалить запись по ключу\n/help - Показать это сообщение"
+    }
+  }
