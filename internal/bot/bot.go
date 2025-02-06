@@ -24,7 +24,7 @@ func StartBot() {
 	whitelist.LoadWhitelist()
 
 	// Загружаем данные из файла при старте
-	storage.LoadStorage()
+	storage.InitStorage()
 	// Получаем токен бота из переменной окружения
 	token := os.Getenv("TELEGRAM_BOT_TOKEN")
 	if token == "" {

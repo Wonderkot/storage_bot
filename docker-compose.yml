@@ -10,7 +10,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - .:/app
+      - storage_data:/app/internal/storage  # Храним файлы данных
     depends_on:
       - ngrok
 
@@ -21,3 +21,6 @@ services:
     environment:
       - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
     command: ngrok http bot:8080
+
+  volumes:
+    storage_data:
